@@ -1,4 +1,4 @@
-[
+const questions = [
     {
         "questionText": "What is 2 + 2?",
         "tags": ["math", "beginner", "cool", "fun"],
@@ -29,4 +29,6 @@
         "correctAnswerIdx": 3,
         "explaination": "The correct answer is 10 ya doingus!."
     }
-]
+];
+
+export default questions;

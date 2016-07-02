@@ -18,7 +18,7 @@ const router = (
 		<Router history={history}>
 			<Route path="/" component={App}>
 				<IndexRoute component={Quiz}/>
-				<Route path="/view/:questionId" component={Question}/>
+				<Route path="/:questionId" component={Question}/>
 			</Route>
 		</Router>
 	</Provider>
@@ -26,4 +26,3 @@ const router = (
 
 
 render(router, document.getElementById('root'));
-
