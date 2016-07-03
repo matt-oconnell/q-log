@@ -1,6 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 
+// CSS
+import css from './styles/style.styl';
+
 // Components
 import App from './components/App';
 import Question from './components/Question';
@@ -23,6 +26,5 @@ const router = (
 		</Router>
 	</Provider>
 );
-
 
 render(router, document.getElementById('root'));

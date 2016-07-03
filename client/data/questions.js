@@ -1,6 +1,7 @@
 const questions = [
     {
-        "questionText": "What is 2 + 2?",
+        "title": "example1",
+	      "questionText": "What is 2 + 2?",
         "tags": ["math", "beginner", "cool", "fun"],
         "type": "multiple-choice",
         "answers": [
@@ -10,7 +11,8 @@ const questions = [
         "explaination": "The correct answer is 2 because the math gods say so."
     },
     {
-        "questionText": "What is 2 * 2?",
+        "title": "example2",
+	      "questionText": "What is 2 * 2?",
         "tags": ["math", "beginner", "cool", "fun"],
         "type": "multiple-choice",
         "answers": [
@@ -20,7 +22,8 @@ const questions = [
         "explaination": "The correct answer is 2 because the math gods say so."
     },
     {
-        "questionText": "What is 5 * 2?",
+        "title": "example3",
+	      "questionText": "What is 5 * 2?",
         "tags": ["math", "beginner", "cool", "fun"],
         "type": "multiple-choice",
         "answers": [
