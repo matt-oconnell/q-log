@@ -1,6 +1,7 @@
 import React from 'react';
 import MultipleChoice from './MultipleChoice'
 import Tags from './Tags'
+import Answer from './Answer'
 
 const Question = React.createClass({
 	render() {
@@ -10,7 +11,8 @@ const Question = React.createClass({
 			<div>
 				<h1>{ question.title }</h1>
 				<p>{ question.questionText }</p>
-				<MultipleChoice answers={ question.answers } {...this.props}/>
+				<MultipleChoice question={ question } {...this.props}/>
+				{ this.props.quiz.submitted ? <Answer question={ question } {...this.props}/> : null }
 				<Tags tags={ question.tags } />
 			</div>
 		)

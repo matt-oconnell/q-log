@@ -32,6 +32,6 @@ const questions = [
         "correctAnswerIdx": 3,
         "explaination": "The correct answer is 10 ya doingus!."
     }
-];
+]
 
-export default questions;
+export default questions
