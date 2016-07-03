@@ -8,3 +8,4 @@ export function submitAnswer(answer, question) {
 		correct
 	}
 }
+
