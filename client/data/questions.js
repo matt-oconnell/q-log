@@ -13,7 +13,7 @@ const questions = [
     {
         "title": "example2",
 	      "questionText": "What is 2 * 2?",
-        "tags": ["math", "beginner", "cool", "fun"],
+        "tags": ["math", "multiplication", "yay", "fun"],
         "type": "multiple-choice",
         "answers": [
             "1", "2", "3", "4"
@@ -24,7 +24,7 @@ const questions = [
     {
         "title": "example3",
 	      "questionText": "What is 5 * 2?",
-        "tags": ["math", "beginner", "cool", "fun"],
+        "tags": ["damn", "this", "is", "tough"],
         "type": "multiple-choice",
         "answers": [
             "1", "4", "5", "10"

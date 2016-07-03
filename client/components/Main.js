@@ -2,16 +2,19 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import Nav from './Nav'
+import Status from './Status'
 
 const Main = React.createClass({
 	render() {
 		return (
 			<div>
-				<Nav {...this.props} />
-				<h1>
-					<Link to="/">Heyo!!!</Link>
-				</h1>
-				{React.cloneElement(this.props.children, this.props)}
+				<div className="left">
+					<Nav {...this.props} />
+					{React.cloneElement(this.props.children, this.props)}
+				</div>
+				<div className="right">
+					<Status {...this.props}/>
+				</div>
 			</div>
 		)
 	}

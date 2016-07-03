@@ -19,7 +19,9 @@ const Nav = React.createClass({
 		return (
 			<div className="nav">
 				{
-					questions.map((q, i) => <NavElement question={q} i={i} key={i} />)
+					questions.map((q, i) =>
+						<NavElement question={q} i={i} key={i} />
+					)
 				}
 			</div>
 		)
