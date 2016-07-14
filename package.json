@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/matt-oconnell/q-log.git"
   },
-  "author": "Wes Bos",
+  "author": "Matt O'Connell",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.7.7",
@@ -50,6 +50,8 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-plugin-react": "^5.2.2",
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
     "mocha": "^2.4.5",

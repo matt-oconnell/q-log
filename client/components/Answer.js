@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 const Answer = React.createClass({
 	render() {
@@ -20,6 +20,6 @@ const Answer = React.createClass({
 			</div>
 		)
 	}
-});
+})
 
-export default Answer;
+export default Answer
