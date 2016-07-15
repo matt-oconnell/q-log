@@ -2,7 +2,7 @@ import React from 'react'
 import MultipleChoice from './MultipleChoice'
 import SingleInput from './SingleInput'
 
-const QuestionContent = React.createClass({
+const QuestionType = React.createClass({
 	render() {
 		const q = this.props.question
 		return (
@@ -14,4 +14,4 @@ const QuestionContent = React.createClass({
 	}
 });
 
-export default QuestionContent
+export default QuestionType

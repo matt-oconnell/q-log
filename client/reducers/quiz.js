@@ -6,6 +6,13 @@ function quiz(state = [], action) {
 				correct: action.correct,
 				submitted: true
 			};
+		case 'NEXT_PAGE':
+			console.log('no????')
+			return {
+				...state,
+				correct: null,
+				submitted: false
+			};
 			return state
 		default:
 			return state
