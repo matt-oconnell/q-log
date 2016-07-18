@@ -8,7 +8,7 @@ const questions = [
 			"1", "2", "3", "4"
 		],
 		"correctAnswerIdx": 3,
-		"explaination": "The correct answer is 2 because the math gods say so."
+		"explaination": "The correct answer is 4 because the math gods say so."
 	},
 	{
 		"title": "example2",
@@ -19,7 +19,7 @@ const questions = [
 			"1", "2", "3", "4"
 		],
 		"correctAnswerIdx": 3,
-		"explaination": "The correct answer is 2 because the math gods say so."
+		"explaination": "The correct answer is 4 because the math gods say so."
 	},
 	{
 		"title": "example3",

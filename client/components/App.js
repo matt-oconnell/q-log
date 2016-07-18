@@ -16,9 +16,6 @@ function mapDispatchToProps(dispatch) {
 	return bindActionCreators(actionCreators, dispatch);
 }
 
-import { browserHistory } from 'react-router'
-browserHistory.listen((loc) => actionCreators.nextPage(loc));
-
 // Add all the props from state to props (all of our action creators)
 // This helps not pass data between multiple levels via props
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);

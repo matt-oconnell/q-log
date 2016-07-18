@@ -1,5 +1,4 @@
 function quiz(state = [], action) {
-	console.log('action', action)
 	switch(action.type) {
 		case 'SUBMIT_ANSWER':
 			return {
@@ -11,7 +10,6 @@ function quiz(state = [], action) {
 		case '@@router/LOCATION_CHANGE':
 			return {
 				...state,
-				correct: null,
 				submitted: false
 			};
 			return state
