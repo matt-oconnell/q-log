@@ -17,20 +17,21 @@ export function submitAnswer(answer, question) {
 export function newQuestion(id) {
 	return function (dispatch) {
     	return getQuestion(id).then(
-      		question => dispatch(newQuestionAction(question)),
+      		question => dispatch(newQuestionAction(id, question)),
       		error => console.log('error fetching')
     	);
   	};
 }
 
 function getQuestion(id) {
-    return $.get(`http://localhost:31338/${id}.json`)
+    return $.get(`http://localhost:31338/questions/${id}/explaination.md`)
 }
 
-function newQuestionAction(question) {
+function newQuestionAction(id, question) {
   return {
     type: 'NEW_QUESTION',
-    question
+    question,
+    id
   };
 }
 

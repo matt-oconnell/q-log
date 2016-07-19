@@ -21,7 +21,7 @@ const router = (
 		<Router history={history}>
 			<Route path="/" component={App}>
 				<IndexRoute component={Quiz}/>
-				<Route path="/:questionId" component={Question}/>
+				<Route path="/:questionId" component={Question} />
 			</Route>
 		</Router>
 	</Provider>
@@ -29,11 +29,10 @@ const router = (
 
 render(router, document.getElementById('root'));
 
-
-import { newQuestion } from './actions/actionCreators';
+// todo: is this the best place for this?
+import { newQuestion } from './actions/actionCreators'
 // on each page change, trigger this
 history.listen(location => {
-	const id = location.pathname.slice(1)
-	store.dispatch(newQuestion(location.pathname))
+	const id = parseInt(location.pathname.slice(1))
+	store.dispatch(newQuestion(id))
 })
-// store.dispatch(testThunk())
