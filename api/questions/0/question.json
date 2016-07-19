@@ -1,11 +1,10 @@
 {
-	"title": "example1",
-	"questionText": "What is 2 + 2?",
-	"tags": ["math", "beginner", "cool", "fun"],
+	"title": "Rest test",
+	"questionText": "To update this article, which http method would you use? http://example.org/article/1234",
+	"tags": ["rest", "api", "http"],
 	"type": "multiple-choice",
 	"answers": [
-		"1", "2", "3", "4"
+		"POST", "GET", "PUT", "DELETE"
 	],
-	"correctAnswerIdx": 3,
-	"explaination": "The `correct` answer is 4 because the __math__ gods say so."
+	"correctAnswerIdx": 2
 }

@@ -1,13 +1,13 @@
-# Live demo
+# PUT vs. POST
 
-Changes are automatically rendered as you type.
+PUT is *idempotent*, meaning: if the network is botched and the client is not sure whether his request made it through, it can just send it a second (or 100th) time, and it is guaranteed by the HTTP spec that this has exactly the same effect as sending once. 
 
-* Follows the [CommonMark](http://commonmark.org/) spec
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+[link](http://stackoverflow.com/questions/630453/put-vs-post-in-rest)
 
-## HTML block below
+-----
+
+refernce stuff down here
+
 
 <blockquote>
     This blockquote will change based on the HTML settings above.
