@@ -12,6 +12,11 @@ function quiz(state = [], action) {
 				...state,
 				submitted: false
 			}
+		case 'NEW_QUESTION':
+			console.log(action.question)
+			return {
+				...state
+			}
 		default:
 			return state
 	}

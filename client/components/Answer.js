@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router'
 import ReactMarkdown from 'react-markdown'
 // temp markdown
-import myMdFile from '../data/markdown/test.md';
+import md from '../data/markdown/test.md'
 
 const Answer = React.createClass({
 	render() {
-		console.log(myMdFile)
 		let id = parseInt(this.props.params.questionId)
 		const next = id < this.props.questions.length - 1 ? id + 1 : 0
 		const explaination = this.props.question.explaination
@@ -17,7 +16,7 @@ const Answer = React.createClass({
 				</p>
 				<div className="explaination">
 					<h3>Explaination:</h3>
-					<ReactMarkdown source={myMdFile} />
+					<ReactMarkdown source={md} />
 				</div>
 				<Link to={`/${next}`}>
 					Next >

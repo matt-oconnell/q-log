@@ -28,3 +28,12 @@ const router = (
 );
 
 render(router, document.getElementById('root'));
+
+
+import { newQuestion } from './actions/actionCreators';
+// on each page change, trigger this
+history.listen(location => {
+	const id = location.pathname.slice(1)
+	store.dispatch(newQuestion(location.pathname))
+})
+// store.dispatch(testThunk())
