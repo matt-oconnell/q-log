@@ -8,7 +8,7 @@ const questions = [
 			"1", "2", "3", "4"
 		],
 		"correctAnswerIdx": 3,
-		"explaination": "The correct answer is 4 because the __math__ gods say so."
+		"explaination": "The `correct` answer is 4 because the __math__ gods say so."
 	},
 	{
 		"title": "example2",

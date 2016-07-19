@@ -26,8 +26,13 @@ module.exports = {
     },
     // json
     {
-        test: /\.json$/,
-        loader: 'json'
+      test: /\.json$/,
+      loader: 'json'
+    },
+    // markdown
+    {
+      test: /\.md$/,
+      loader: 'raw'
     },
     // CSS
     { 
