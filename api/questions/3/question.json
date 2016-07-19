@@ -1,0 +1,11 @@
+{
+	"title": "example4",
+	"questionText": "What is 5 * 2?",
+	"tags": ["input", "single"],
+	"type": "single-input",
+	"answers": [
+		"10"
+	],
+	"correctAnswerIdx": 0,
+	"explaination": "The correct answer is 10 ya doingus!."
+}

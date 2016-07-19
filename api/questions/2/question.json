@@ -1,0 +1,11 @@
+{
+	"title": "example3",
+	"questionText": "What is 5 * 2?",
+	"tags": ["damn", "this", "is", "tough"],
+	"type": "multiple-choice",
+	"answers": [
+		"1", "4", "5", "10"
+	],
+	"correctAnswerIdx": 3,
+	"explaination": "The correct answer is 10 ya doingus!."
+}
