@@ -2,7 +2,7 @@ import React from 'react';
 
 const Status = React.createClass({
 	render() {
-		const q = this.props.questions[this.props.params.questionId]
+		const q = this.props.question
 		const { status, quiz } = this.props
 		return (
 			<div className="status">

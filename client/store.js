@@ -7,12 +7,14 @@ import thunk from 'redux-thunk'
 import rootReducer from './reducers/index'
 
 import questions from './data/questions'
+import question from './data/question'
 import status from './data/status'
 import quiz from './data/quiz'
 
 // create an object for the default data
 const defaultState = {
 	questions,
+	question,
 	status,
 	quiz
 }
