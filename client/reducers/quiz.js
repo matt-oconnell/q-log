@@ -5,14 +5,13 @@ function quiz(state = [], action) {
 				...state,
 				correct: action.correct,
 				submitted: true
-			};
+			}
 		// determine how to do this correctly
 		case '@@router/LOCATION_CHANGE':
 			return {
 				...state,
 				submitted: false
-			};
-			return state
+			}
 		default:
 			return state
 	}

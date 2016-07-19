@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import ReactMarkdown from 'react-markdown'
 
 const Answer = React.createClass({
 	render() {
 		let id = parseInt(this.props.params.questionId)
 		const next = id < this.props.questions.length - 1 ? id + 1 : 0
+		const explaination = this.props.question.explaination
 		return (
 			<div className="answer">
 				<p>
@@ -12,7 +14,7 @@ const Answer = React.createClass({
 				</p>
 				<div className="explaination">
 					<h3>Explaination:</h3>
-					<p>{this.props.question.explaination}</p>
+					<ReactMarkdown source={explaination} />
 				</div>
 				<Link to={`/${next}`}>
 					Next >
