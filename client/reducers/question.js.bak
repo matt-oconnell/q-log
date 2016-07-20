@@ -1,6 +1,6 @@
 function question(state = [], action) {
 	switch(action.type) {
-		case 'NEW_EXPLANATION':
+		case 'NEW_EXPLAINATION':
 			return {
 				...state,
 				explanation: action.explanation

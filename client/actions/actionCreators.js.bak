@@ -39,7 +39,7 @@ function newQuestionAction(id, question) {
 
 function newExplanationAction(id, explanation) {
     return {
-        type: 'NEW_EXPLANATION',
+        type: 'NEW_EXPLAINATION',
         explanation,
         id
     }
