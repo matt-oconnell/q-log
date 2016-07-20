@@ -6,5 +6,5 @@
 	"answers": [
 		"POST", "GET", "PUT", "DELETE"
 	],
-	"correctAnswers": ["put"]
+	"correctAnswerIdx": 2
 }

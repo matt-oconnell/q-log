@@ -1,5 +1,14 @@
 import $ from 'jquery'
 
+// Firebase
+import firebase from 'firebase'
+import config from './../fb-config'
+
+firebase.initializeApp(config)
+
+const db = firebase.database();
+
+
 // these are "action creators." they put together the action and dispatch it
 
 export function submitAnswer(userAnswer, correctAnswers) {
@@ -14,6 +23,27 @@ export function submitAnswer(userAnswer, correctAnswers) {
     		type: 'SUBMIT_ANSWER',
     		correct
   	}
+}
+
+/*
+Get questions from Firebase
+*/
+export function loadQuestions() {
+  return function(dispatch) {
+      return db.ref('questions').once('value').then(
+        snapshot => {
+          dispatch(LoadQuestionsAction(snapshot))
+        },
+        error => console.error(error)
+      )
+  }
+}
+
+function LoadQuestionsAction(snapshot) {
+    return {
+        type: 'LOAD_QUESTIONS',
+        questions: snapshot.val()
+    }
 }
 
 /*

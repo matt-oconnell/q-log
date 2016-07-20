@@ -30,9 +30,10 @@ const router = (
 render(router, document.getElementById('root'));
 
 // todo: is this the best place for this?
-import { newQuestion } from './actions/actionCreators'
+import { newQuestion, loadQuestions } from './actions/actionCreators'
 // on each page change, trigger this
 history.listen(location => {
 	const id = parseInt(location.pathname.slice(1))
 	store.dispatch(newQuestion(id))
+	store.dispatch(loadQuestions())
 })
