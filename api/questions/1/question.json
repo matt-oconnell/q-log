@@ -1,10 +1,10 @@
 {
-	"title": "example2",
-	"questionText": "What is 2 * 2?",
+	"title": "Additional HTTP methods",
+	"questionText": "Outside of the 4 main REST HTTP methods, what are some more?",
 	"tags": ["math", "multiplication", "yay", "fun"],
-	"type": "multiple-choice",
+	"type": "single-input",
 	"answers": [
-		"1", "2", "3", "4"
+		"headers", "other"
 	],
 	"correctAnswerIdx": 3,
 	"explaination": "The correct answer is 4 because the math gods say so."
