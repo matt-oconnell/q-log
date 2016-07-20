@@ -47,28 +47,32 @@ function LoadQuestionsAction(snapshot) {
 }
 
 /*
-	Dynamically load new questions
+	Dynamically load new questions & explanations
 */
 export function newQuestion(id) {
 	return function (dispatch) {
-      return $.when(
-          $.get(`http://localhost:31338/questions/${id}/question.json`),
-          $.get(`http://localhost:31338/questions/${id}/explanation.md`)
-      ).then(
-      		(question, explanation) => {
-              dispatch(newQuestionAction(id, question[0]))
-              dispatch(newExplanationAction(id, explanation[0]))
-          },
+      return $.get(`http://localhost:31338/questions/${id}/question.json`).then(
+      		question => dispatch(newQuestionAction(id, question)),
       		error => console.log('error fetching the stuffs', error)
-    	);
-  	};
+    	)
+  	}
 }
 
 function newQuestionAction(id, question) {
+  console.log('question', question)
     return {
         type: 'NEW_QUESTION',
         question,
         id
+    }
+}
+
+export function newExplanation(id) {
+  return function (dispatch) {
+      return $.get(`http://localhost:31338/questions/${id}/explanation.md`).then(
+          explanation => dispatch(newExplanationAction(id, explanation)),
+          error => console.log('error fetching the stuffs', error)
+      )
     }
 }
 
