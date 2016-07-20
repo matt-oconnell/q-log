@@ -6,7 +6,15 @@ function question(state = [], action) {
 				explanation: action.explanation
 			}
 		case 'NEW_QUESTION':
-			return { ...action.question }
+			return {
+				...state,
+				title: action.question.title,
+				questionText: action.question.questionText,
+				tags: action.question.tags,
+				type: action.question.type,
+				answers: action.question.answers,
+				correctAnswers: action.question.answers
+			}
 		default:
 			return state
 	}
