@@ -1,10 +1,10 @@
 {
 	"title": "Rest test",
-	"questionText": "To update this article, which http method would you use? http://example.org/article/1234",
+	"questionText": "Which of these methods are not idempotent?",
 	"tags": ["rest", "api", "http"],
 	"type": "multiple-choice",
 	"answers": [
 		"POST", "GET", "PUT", "DELETE"
 	],
-	"correctAnswers": ["put"]
+	"correctAnswers": ["post"]
 }

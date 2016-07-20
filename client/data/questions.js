@@ -11,6 +11,15 @@ const questions = [
 	{
 		"title": "example4"
 	},
+	{
+		"title": "example5"
+	},
+	{
+		"title": "example6"
+	},
+	{
+		"title": "example7"
+	},
 ]
 
 export default questions

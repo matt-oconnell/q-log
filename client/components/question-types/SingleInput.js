@@ -2,12 +2,8 @@ import React from 'react';
 
 const SingleInput = React.createClass({
 	handleClick: function() {
-		if (this.answer !== null) {
-			console.log(this.answer.value)
-			this.props.submitAnswer(this.answer.value, this.props.question)
-		} else {
-			console.log('need answer!')
-		}
+		const { props, answer } = this
+		props.submitAnswer(answer.value, props.question.correctAnswers)
 	},
 	render() {
 		return (

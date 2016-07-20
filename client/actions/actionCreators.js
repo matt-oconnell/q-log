@@ -1,8 +1,15 @@
 import $ from 'jquery'
 
 // these are "action creators." they put together the action and dispatch it
-export function submitAnswer(userAnswer, correctAnswer) {
-  	const correct = correctAnswer === userAnswer
+
+export function submitAnswer(userAnswer, correctAnswers) {
+    if(typeof userAnswer === 'string') {
+        userAnswer = userAnswer.toLowerCase()  
+    }
+    if(typeof correctAnswers[0] === 'number') {
+        userAnswer = parseFloat(userAnswer)
+    }
+    const correct = correctAnswers.indexOf(userAnswer) > -1
   	return {
     		type: 'SUBMIT_ANSWER',
     		correct

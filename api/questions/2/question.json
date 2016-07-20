@@ -1,11 +1,13 @@
 {
-	"title": "example3",
-	"questionText": "What is 5 * 2?",
-	"tags": ["damn", "this", "is", "tough"],
+	"title": "POST Encoding",
+	"questionText": "What is the default encoding of a POST request from an HTML web form?",
+	"tags": ["rest", "api", "http", "post"],
 	"type": "multiple-choice",
 	"answers": [
-		"1", "4", "5", "10"
+		"multipart/form-data",
+		"x-www-form-urlencoded",
+		"text/plain",
+		"application/json"
 	],
-	"correctAnswerIdx": 3,
-	"explaination": "The correct answer is 10 ya doingus!."
+	"correctAnswers": ["x-www-form-urlencoded"]
 }

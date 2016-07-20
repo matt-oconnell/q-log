@@ -11,7 +11,7 @@ const Status = React.createClass({
 				<p><span>Questions:</span> {status.correct} / {status.answered}</p>
 				<hr />
 				<p>{ q.title }</p>
-				<p><span>Correct Answer:</span> {q.answers[q.correctAnswerIdx]}</p>
+				<p><span>Correct Answer:</span> {q.correctAnswer}</p>
 				<hr />
 				<p><span>Current Index:</span> { quiz.currentQuestionId }</p>
 				<p><span>Submitted:</span> { quiz.submitted ? 'true' : 'false'}</p>

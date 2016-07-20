@@ -4,7 +4,6 @@ const question = {
 	"tags": [],
 	"type": "",
 	"answers": [],
-	"correctAnswerIdx": null,
 	"explanation": ""
 }
 

@@ -1,11 +1,7 @@
 {
 	"title": "Additional HTTP methods",
-	"questionText": "Outside of the 4 main REST HTTP methods, what are some more?",
-	"tags": ["math", "multiplication", "yay", "fun"],
+	"questionText": "What is an additonal HTTP methods outside of the 4 main REST methods?",
+	"tags": ["rest", "api", "http"],
 	"type": "single-input",
-	"answers": [
-		"headers", "other"
-	],
-	"correctAnswerIdx": 3,
-	"explaination": "The correct answer is 4 because the math gods say so."
+	"correctAnswers": ["head", "options", "trace", "connect"]
 }
