@@ -13,7 +13,7 @@ function question(state = [], action) {
 				tags: action.question.tags,
 				type: action.question.type,
 				answers: action.question.answers,
-				correctAnswers: action.question.answers
+				correctAnswers: action.question.correctAnswers
 			}
 		default:
 			return state

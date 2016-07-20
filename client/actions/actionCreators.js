@@ -19,6 +19,7 @@ export function submitAnswer(userAnswer, correctAnswers) {
         userAnswer = parseFloat(userAnswer)
     }
     const correct = correctAnswers.indexOf(userAnswer) > -1
+    console.log(userAnswer, correctAnswers)
     return {
         type: 'SUBMIT_ANSWER',
         correct
@@ -51,17 +52,16 @@ function LoadQuestionsAction(snapshot) {
 */
 export function newQuestion(id) {
   return function (dispatch) {
-      // figure this shit out....
       return db.ref('questions').child(id).once('value').then(
         snapshot => {
           dispatch(newQuestionAction(id, snapshot.val()))
         },
         error => console.error(error)
       )
-      return $.get(`http://localhost:31338/questions/${id}.json`).then(
-          question => dispatch(newQuestionAction(id, question)),
-          error => console.log('error fetching the stuffs', error)
-      )
+      // return $.get(`http://localhost:31338/questions/${id}.json`).then(
+      //     question => dispatch(newQuestionAction(id, question)),
+      //     error => console.log('error fetching the stuffs', error)
+      // )
     }
 }
 
@@ -75,7 +75,6 @@ function newQuestionAction(id, question) {
 }
 
 export function newExplanation(id) {
-  console.log('second?')
   return function (dispatch) {
       return $.get(`http://localhost:31338/explanations/${id}.md`).then(
           explanation => dispatch(newExplanationAction(id, explanation)),
