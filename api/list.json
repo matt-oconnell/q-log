@@ -1,0 +1,79 @@
+[ {
+  "answers" : [ "POST", "GET", "PUT", "DELETE" ],
+  "correctAnswers" : [ "put" ],
+  "questionText" : "To update this article, which http method would you use? http://example.org/article/1234",
+  "tags" : [ "rest", "api", "http" ],
+  "title" : "Rest test",
+  "type" : "multiple-choice"
+}, {
+  "correctAnswers" : [ "head", "options", "trace", "connect" ],
+  "questionText" : "What is an additonal HTTP methods outside of the 4 main REST methods?",
+  "tags" : [ "rest", "api", "http" ],
+  "title" : "Additional HTTP methods",
+  "type" : "single-input"
+}, {
+  "answers" : [ "multipart/form-data", "x-www-form-urlencoded", "text/plain", "application/json" ],
+  "correctAnswers" : [ "x-www-form-urlencoded" ],
+  "questionText" : "What is the default encoding of a POST request from an HTML web form?",
+  "tags" : [ "rest", "api", "http", "post" ],
+  "title" : "POST Encoding",
+  "type" : "multiple-choice"
+}, {
+  "answers" : [ "multipart/form-data", "x-www-form-urlencoded", "text/plain", "application/json" ],
+  "correctAnswers" : [ "multipart/form-data" ],
+  "questionText" : "What encoding must we use when submitting files via an HTML form?",
+  "tags" : [ "forms", "http", "post" ],
+  "title" : "File Upload Form Encoding",
+  "type" : "multiple-choice"
+}, {
+  "answers" : [ "POST", "GET", "PUT", "DELETE" ],
+  "correctAnswers" : [ "post" ],
+  "questionText" : "Which of these methods are not idempotent?",
+  "tags" : [ "rest", "api", "http" ],
+  "title" : "Rest test",
+  "type" : "multiple-choice"
+}, {
+  "answers" : [ "multipart/form-data", "x-www-form-urlencoded", "text/plain", "application/json" ],
+  "correctAnswers" : [ "multipart/form-data" ],
+  "questionText" : "What encoding must we use when submitting files via an HTML form?",
+  "tags" : [ "forms", "http", "post" ],
+  "title" : "File Upload Form Encoding",
+  "type" : "multiple-choice"
+},
+{
+  "title": "JS: Primatives",
+  "questionText": "Which of the following basic data types is not a javascript primative type?",
+  "tags": ["javascript", "data structures", "primatives"],
+  "type": "multiple-choice",
+  "answers": [
+    "Boolean",
+    "Undefined",
+    "Null",
+    "Number",
+    "Object",
+    "String",
+    "Symbol"
+  ],
+  "correctAnswers": ["object"]
+},
+{
+  "title": "JS: Object Assignments",
+  "questionText": "var obj1 = {val: 1}; var obj2 = obj1; obj2.val = 2; What is the output of obj1.val?",
+  "tags": ["javascript", "data structures", "objects"],
+  "type": "single-input",
+  "correctAnswers": ["2"]
+},
+{
+  "title": "JS: Pass Arguments by Value",
+  "questionText": "",
+  "tags": ["javascript", "data structures", "primatives"],
+  "type": "single-input",
+  "correctAnswers": ["99"]
+},
+{
+  "title": "JS: Pass Arguments by Reference",
+  "questionText": "",
+  "tags": ["javascript", "data structures", "objects"],
+  "type": "single-input",
+  "correctAnswers": ["4.7"]
+} ]
