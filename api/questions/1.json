@@ -1,7 +1,0 @@
-{
-	"title": "Additional HTTP methods",
-	"questionText": "What is an additonal HTTP methods outside of the 4 main REST methods?",
-	"tags": ["rest", "api", "http"],
-	"type": "single-input",
-	"correctAnswers": ["head", "options", "trace", "connect"]
-}
