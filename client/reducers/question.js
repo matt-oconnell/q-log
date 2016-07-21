@@ -15,6 +15,15 @@ function question(state = [], action) {
 				answers: action.question.answers,
 				correctAnswers: action.question.correctAnswers
 			}
+		case 'NEW_QUESTION_TEXT':
+			console.log({
+				...state,
+				questionText: action.questionText
+			})
+			return {
+				...state,
+				questionText: action.questionText
+			}
 		default:
 			return state
 	}

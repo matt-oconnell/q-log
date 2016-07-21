@@ -19,7 +19,6 @@ export function submitAnswer(userAnswer, correctAnswers) {
         userAnswer = parseFloat(userAnswer)
     }
     const correct = correctAnswers.indexOf(userAnswer) > -1
-    console.log(userAnswer, correctAnswers)
     return {
         type: 'SUBMIT_ANSWER',
         correct
@@ -29,21 +28,27 @@ export function submitAnswer(userAnswer, correctAnswers) {
 /*
 Get questions from Firebase
 */
-export function loadQuestions() {
-  return function(dispatch) {
-      return db.ref('questions').once('value').then(
-        snapshot => {
-          dispatch(LoadQuestionsAction(snapshot))
-        },
-        error => console.error(error)
-      )
-  }
-}
+// export function loadQuestions() {
+//   return function(dispatch) {
+//       // return db.ref('questions').once('value').then(
+//       //   snapshot => {
+//       //     dispatch(loadQuestionsAction(snapshot))
+//       //   },
+//       //   error => console.error(error)
+//       // )
+//       return $.get(`http://localhost:31338/list.json`).then(
+//           questions => {
+//              dispatch(loadQuestionsAction(questions))
+//           },
+//           error => console.log('error fetching the list', error)
+//       )
+//   }
+// }
 
-function LoadQuestionsAction(snapshot) {
+function loadQuestionsAction(questions) {
     return {
         type: 'LOAD_QUESTIONS',
-        questions: snapshot.val()
+        questions: questions
     }
 }
 
@@ -52,24 +57,44 @@ function LoadQuestionsAction(snapshot) {
 */
 export function newQuestion(id) {
   return function (dispatch) {
-      return db.ref('questions').child(id).once('value').then(
-        snapshot => {
-          dispatch(newQuestionAction(id, snapshot.val()))
-        },
-        error => console.error(error)
-      )
-      // return $.get(`http://localhost:31338/questions/${id}.json`).then(
-      //     question => dispatch(newQuestionAction(id, question)),
-      //     error => console.log('error fetching the stuffs', error)
+      // return db.ref('questions').child(id).once('value').then(
+      //   snapshot => {
+      //     dispatch(newQuestionAction(id, snapshot.val()))
+      //   },
+      //   error => console.error(error)
       // )
+      return $.get(`http://localhost:31338/list.json`).then(
+          questions => {
+            const question = questions[id]
+            dispatch(loadQuestionsAction(questions))
+            dispatch(newQuestionAction(id, question))
+          },
+          error => console.log('error fetching the list', error)
+      )
     }
 }
 
 function newQuestionAction(id, question) {
-  console.log('question', question)
     return {
         type: 'NEW_QUESTION',
         question,
+        id
+    }
+}
+
+export function newQuestionText(id) {
+  return function (dispatch) {
+      return $.get(`http://localhost:31338/questions/${id}.md`).then(
+          questionText => dispatch(newQuestionTextAction(id, questionText)),
+          error => console.log('error fetching the question text', error)
+      )
+    }
+}
+
+function newQuestionTextAction(id, questionText) {
+    return {
+        type: 'NEW_QUESTION_TEXT',
+        questionText,
         id
     }
 }
@@ -78,7 +103,7 @@ export function newExplanation(id) {
   return function (dispatch) {
       return $.get(`http://localhost:31338/explanations/${id}.md`).then(
           explanation => dispatch(newExplanationAction(id, explanation)),
-          error => console.log('error fetching the stuffs', error)
+          error => console.log('error fetching the explaination', error)
       )
     }
 }
