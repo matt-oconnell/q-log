@@ -1,14 +1,5 @@
 import $ from 'jquery'
 
-// Firebase
-import firebase from 'firebase'
-import config from './../fb-config'
-
-firebase.initializeApp(config)
-
-const db = firebase.database();
-
-
 // these are "action creators." they put together the action and dispatch it
 
 export function submitAnswer(userAnswer, correctAnswers) {
@@ -25,26 +16,6 @@ export function submitAnswer(userAnswer, correctAnswers) {
     }
 }
 
-/*
-Get questions from Firebase
-*/
-// export function loadQuestions() {
-//   return function(dispatch) {
-//       // return db.ref('questions').once('value').then(
-//       //   snapshot => {
-//       //     dispatch(loadQuestionsAction(snapshot))
-//       //   },
-//       //   error => console.error(error)
-//       // )
-//       return $.get(`http://localhost:31338/list.json`).then(
-//           questions => {
-//              dispatch(loadQuestionsAction(questions))
-//           },
-//           error => console.log('error fetching the list', error)
-//       )
-//   }
-// }
-
 function loadQuestionsAction(questions) {
     return {
         type: 'LOAD_QUESTIONS',
@@ -57,15 +28,10 @@ function loadQuestionsAction(questions) {
 */
 export function newQuestion(id) {
   return function (dispatch) {
-      // return db.ref('questions').child(id).once('value').then(
-      //   snapshot => {
-      //     dispatch(newQuestionAction(id, snapshot.val()))
-      //   },
-      //   error => console.error(error)
-      // )
       return $.get(`http://localhost:31338/list.json`).then(
           questions => {
             const question = questions[id]
+            //change route
             dispatch(loadQuestionsAction(questions))
             dispatch(newQuestionAction(id, question))
           },

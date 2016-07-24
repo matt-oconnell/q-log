@@ -76,4 +76,12 @@
   "tags": ["javascript", "data structures", "objects"],
   "type": "single-input",
   "correctAnswers": ["4.7"]
-} ]
+},
+{
+  "title": "JS: String Comparisons",
+  "questionText": "",
+  "tags": ["javascript", "booleans", "strings"],
+  "type": "single-input",
+  "correctAnswers": ["true"]
+}
+]

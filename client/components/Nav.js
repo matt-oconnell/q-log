@@ -15,9 +15,7 @@ const NavElement = React.createClass({
 
 const Nav = React.createClass({
 	render() {
-
 		const { questions } = this.props
-		console.log(questions)
 		return (
 			<div className="nav">
 				{
