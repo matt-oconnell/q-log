@@ -81,7 +81,32 @@
   "title": "JS: String Comparisons",
   "questionText": "",
   "tags": ["javascript", "booleans", "strings"],
+  "type": "multiple-choice",
+  "answers": [
+    "A", "B", "C",
+    "None of the Above",
+    "All of the Above"
+  ],
+  "correctAnswers": ["b"]
+},
+{
+  "title": "JS: Variable Assignments",
+  "questionText": "",
+  "tags": ["javascript", "scope", "iife", "variable assignment"],
+  "type": "multiple-choice",
+  "answers": [
+    "outside",
+    "inside",
+    "Neither, we get an Uncaught ReferenceError"
+  ],
+  "correctAnswers": ["inside"]
+},
+{
+  "title": "JS: Object Assignments",
+  "questionText": "",
+  "tags": ["javascript", "keys", "objects", "object assignment"],
   "type": "single-input",
-  "correctAnswers": ["true"]
+  "answers": [""],
+  "correctAnswers": ["cool new value 2"]
 }
 ]
