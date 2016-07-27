@@ -108,5 +108,13 @@
   "type": "single-input",
   "answers": [""],
   "correctAnswers": ["cool new value 2"]
+},
+{
+  "title": "JS: Closures",
+  "questionText": "",
+  "tags": ["javascript", "closures"],
+  "type": "single-input",
+  "answers": ["xyz2"],
+  "correctAnswers": ["xyz2"]
 }
 ]
